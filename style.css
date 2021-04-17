@@ -1,0 +1,561 @@
+/* ***** NORMALIZE et al begins ***** */
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+/* ***** NORMALIZE et al ends ***** */
+
+/* DEBUG
+* {
+    border: 1px solid mediumturquoise;
+}
+*/
+
+/* ***** GENERAL & STRIPPING styling begins ***** */
+html {
+    font-size: 62.5%; /* sets base font size to 10px */
+}
+
+body {
+    font-family: 'Vidaloka', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #0C1D24;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 100px;
+}
+/* ***** GENERAL & STRIPPING styling ends ***** */
+
+/* ***** TEXT, LINKS, LISTS, BUTTONS styling begins ***** */
+.header-nav a,
+h1,
+button,
+.destinations-text {
+    color: #FFF;
+}
+
+.header-nav a {
+    font-size: 2.5rem;
+}
+
+a:hover,
+.footer-nav a:hover,
+.footer-end a:hover,
+a:focus-within,
+.footer-nav a:focus-within,
+.footer-end a:focus-within {
+    color: #D45121;
+}
+
+h1,
+.gallery-section h2,
+.destinations-text p,
+.latest-section h2,
+.footer-end p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 7rem;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+}
+
+h2 {
+    font-size: 5rem;
+    margin: 25px 0;
+}
+
+h3 {
+    font-size: 3.2rem;
+    margin: 0;
+    padding: 5px 0;
+}
+
+p,
+.footer-nav ul {
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-text p {
+    line-height: 3rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+button {
+    font-family: inherit;
+    letter-spacing: 2px;
+    background: #D45121;
+    border: none;
+    padding: 15px 40px;
+}
+
+button,
+.destinations-text p {
+    text-transform: uppercase;
+}
+
+.destinations-text h1 {
+    font-size: 9rem;
+    margin: 0;
+}
+
+.destinations-text p {
+    letter-spacing: 0.5rem;
+    margin-top: 20px;
+}
+
+.card-text p {
+    color: #8D9BA0;
+    font-size: 1.6rem;
+    padding: 5px 0;
+}
+
+.footer-nav ul li a,
+.footer-end,
+.footer-end p a {
+    color: #EBEFF1;
+}
+
+.footer-end p {
+    margin: 0;
+}
+/* ***** TEXT, LINKS, LISTS, BUTTONS styling ends ***** */
+
+/* ***** FLEXBOX styling begins ***** */
+.flex-container {
+    display: flex;
+}
+
+.header-nav,
+ul,
+.about-section,
+.gallery-images,
+.latest-cards {
+    justify-content: space-between;
+}
+
+.header-nav ul,
+.footer-section {
+    align-items: center;
+}
+
+.about-section,
+.gallery-images,
+.latest-cards {
+    flex-wrap: wrap;
+}
+
+.destinations-section,
+.card-text {
+    justify-content: center;
+}
+
+.card-text,
+.footer-section {
+    flex-direction: column;
+}
+/* ***** FLEXBOX styling ends ***** */
+
+/* 
+*********************
+HEADER styling begins
+*********************
+*/
+header {
+    background-image: url(./assets/hero.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-nav {
+    padding: 50px;
+    position: relative;
+}
+
+.header-nav .logo {
+    width: 100px;
+    height: 100px;
+}
+
+.header-nav ul {
+    width: 360px;
+}
+
+#drop-menu {
+    display: none;
+}
+
+.menu-btn {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    color: #FFF;
+    border-top: 3px solid #FFF;
+    border-bottom: 3px solid #FFF;
+    height: 45px;
+    padding-top: 6px;
+    position: absolute;
+    right: 50px;
+    top: 75px;
+    display: none;
+}
+
+header h1 {
+    margin-top: 225px;
+}
+/* 
+*******************
+HEADER styling ends
+*******************
+*/
+
+/* 
+****************************
+ABOUT SECTION styling begins
+****************************
+*/
+.about-img {
+    width: 45%;
+    height: 575px;
+}
+
+.about-text {
+    width: 50%;
+    padding-left: 4%;
+}
+/* 
+**************************
+ABOUT SECTION styling ends
+**************************
+*/
+
+/* 
+******************************
+GALLERY SECTION styling begins
+******************************
+*/
+.gallery-img {
+    height: 375px;
+}
+
+.one-third-img {
+    width: calc(100%/3 - 1%);
+}
+
+.half-img {
+    margin-top: 15px;
+    width: calc(50% - 0.75%);
+}
+/* 
+****************************
+GALLERY SECTION styling ends
+****************************
+*/
+
+/* 
+***********************************
+DESTINATIONS SECTION styling begins
+***********************************
+*/
+.destinations-section {
+    background-image: url(./assets/image2.jpg);
+    background-size: cover;
+    background-position: 0 55%;
+    height: 450px;
+}
+
+.destinations-text {
+    margin-top: 125px;
+}
+/* 
+*********************************
+DESTINATIONS SECTION styling ends
+*********************************
+*/
+
+/* 
+*****************************
+LATEST SECTION styling begins
+*****************************
+*/
+.latest-section {
+    height: 650px;
+}
+
+.card {
+    width: calc(100%/3 - 1%);
+    height: 400px;
+}
+
+.card-text {
+    background: #EBEFF1;
+    height: 125px;
+    padding-left: 25px;
+}
+/* 
+***************************
+LATEST SECTION styling ends
+***************************
+*/
+
+/* 
+*********************
+FOOTER styling begins
+*********************
+*/
+footer {
+    background: #0C1D24;
+    margin-top: 75px;
+    height: 275px;
+}
+
+.footer-section {
+    height: 125px;
+    padding-top: 50px;
+}
+
+footer .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-nav ul {
+    width: 400px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+.footer-end {
+    border-top: 1px solid #EBEFF1;
+    padding-top: 25px;
+    width: 100%;
+}
+/* 
+*******************
+FOOTER styling ends
+*******************
+*/
+
+
+/* 
+*************
+MEDIA QUERIES
+*************
+*/
+
+@media (max-width: 1145px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    h3 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 875px) {
+    .about-section {
+        height: auto;
+    }
+
+    .about-img,
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text {
+        padding: 0;
+    }
+
+    .about-text h2 {
+        text-align: center;
+    }
+
+    .gallery-section {
+        height: auto;
+    }
+
+    .gallery-img {
+        height: 350px;
+    }
+
+    .portrait-img {
+        width: calc(50% - 1%);
+    }
+
+    .landscape-img {
+        width: 100%;
+    }
+
+    .gallery-img {
+        margin: 1% 0;
+    }
+
+    .plane-img {
+        order: 1;
+    }
+
+    .cabin-img {
+        order: 3;
+    }
+
+    .cliff-img {
+        order: 2;
+    }
+
+    .village-img {
+        order: 4;
+    }
+
+    .building-img {
+        order: 5;
+    }
+
+    .latest-section {
+        height: 1050px;
+    }
+
+    .latest-cards {
+        height: calc(900px - 10px - 10px);
+        justify-content: center;
+        align-content: space-between;
+    }
+
+    .card {
+        width: 300px;
+        padding: 10px;
+    }
+
+    .card-text {
+        height: 75px;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 675px) {
+    ul.drop-menu {
+        background: #0C1D24;
+        opacity: 95%;
+        width: 100%;
+        height: 50vh;
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        z-index: 10;
+        transition: all 0.5s;
+    }
+
+    .drop-menu li {
+        padding: 25px 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    label.menu-btn:hover,
+    label.menu-btn:focus-within {
+        background: #D45121;
+    }
+
+    input[type="checkbox"]:checked ~ ul.drop-menu {
+        top: 175px;
+        left: 0;
+    }
+
+    .about-img {
+        height: 450px;
+    }
+
+    .gallery-img {
+        width: 100%;
+    }
+
+    .destinations-text p {
+        margin-top: 5px;
+    }
+    
+    .latest-section {
+        height: 1825px;
+    }
+
+    .latest-cards {
+        height: calc(1675px - 10px - 10px);
+        justify-content: center;
+        align-content: space-between;
+    }
+
+    .card {
+        width: 100%;
+        height: 500px;
+    }
+
+    .card-text {
+        height: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .footer-nav {
+        font-size: 1.6rem;
+    }
+
+    .footer-end p {
+        font-size: 1.4rem;
+    }
+}
